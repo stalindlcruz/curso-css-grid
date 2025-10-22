@@ -73,4 +73,41 @@ Esto es particularmente útil para mantener un diseño limpio y ordenado, permit
 
 📏 Comparación con Columnas
 Aunque este sistema de auto-generación se aplica principalmente a las filas, también puedes implementarlo para columnas. Por defecto, los elementos se organizan en filas, pero tienes la opción de reestructurar el diseño a columnas si así lo prefieres. Este aspecto se explorará más a fondo en lecciones posteriores.
+
+La cantidad de columnas no está determinada por una regla rígida. Depende del diseño y la interfaz de usuario (UI). En plataformas como Google, puedes observar un gran número de columnas, y eso es completamente normal. Aquí tu creatividad juega un papel fundamental.
+
+📏 ¿Qué es la función minmax()?
+La función minmax() te permite especificar el tamaño mínimo y máximo de un elemento grid. Por ejemplo, si deseas que una columna tenga un ancho mínimo de 100 píxeles y que crezca hasta ocupar el espacio disponible, puedes hacerlo utilizando:
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 1fr;
+}
+
+En el código anterior:
+
+La primera columna tendrá un ancho mínimo de 100 píxeles y puede crecer hasta ocupar una fracción del espacio disponible.
+
+La segunda columna se ajustará al resto del espacio.
+
+🔍 Comportamiento de la función minmax()
+
+Ejemplo práctico
+Al ajustar el tamaño de la pantalla, verás cómo la primera columna nunca será más estrecha que 100 píxeles. Aquí tienes un flujo básico de cómo se comportan las columnas al cambiar el tamaño de la ventana:
+
+Ajusta tu pantalla: Observa cómo la primera columna mantiene su tamaño mínimo.
+
+Espacios en fracción: Cuando hay suficiente espacio, ambas columnas se ajustan al espacio de manera uniforme.
+
+📊 Contexto real
+Imagina que estás creando una aplicación similar a Spotify, donde necesitas que ciertos elementos de la interfaz, como menús o barras laterales, mantengan un tamaño mínimo para asegurar que los iconos o textos sean visibles. La función minmax() se convierte en tu aliada para lograr esto.
+
+🛠️ Ventajas de utilizar minmax()
+
+Evita media queries: Con minmax(), puedes lograr un diseño responsivo sin la necesidad de múltiples media queries, simplificando tu CSS.
+
+Diseños más flexibles: Permite que tus columnas y filas se comporten de manera más inteligente según el espacio disponible.
+
+✅ Resumen
+La función minmax() es esencial para diseñar interfaces responsivas con CSS Grid. Te permite establecer límites en el tamaño de tus columnas y filas, asegurándote de que tu contenido siempre sea visible y bien presentado.
  -->
