@@ -110,4 +110,26 @@ Diseños más flexibles: Permite que tus columnas y filas se comporten de manera
 
 ✅ Resumen
 La función minmax() es esencial para diseñar interfaces responsivas con CSS Grid. Te permite establecer límites en el tamaño de tus columnas y filas, asegurándote de que tu contenido siempre sea visible y bien presentado.
+
+💡 Gap vs Margin en CSS Grid
+En esta lección, exploraremos las diferencias esenciales entre gap y margin en el contexto de CSS Grid. Aprenderás por qué el uso de gap es generalmente más efectivo para crear separación entre elementos, y cómo esto puede simplificar tu código y mejorar la coherencia en tu diseño.
+
+📏 ¿Qué es el Gap?
+El gap es una propiedad diseñada para trabajar específicamente con contenedores de cuadrícula. Permite controlar la separación entre elementos de forma más sencilla, sin afectar los elementos exteriores.
+
+Ejemplo de Uso de Gap
+Imagina que tienes una cuadrícula con varias filas. Puedes establecer un gap para controlar el espacio entre ellas:
+
+.container {
+  display: grid;
+  grid-template-rows: auto 50px;
+  gap: 16px; /* espacio entre filas */
+}
+
+📐 Comprendiendo el Margin
+Por otro lado, el margin se aplica a los elementos individuales y puede resultar más complicado al intentar cohesionar la separación entre ellos. Al usar margin, la separación externa puede llevar a efectos no deseados que son más difíciles de manejar.
+
+🚀 ¿Cuándo Usar Gap y Margin?
+Gap: Utiliza esta propiedad cuando quieras que la separación entre los elementos de la cuadrícula sea uniforme y fácil de administrar.
+Margin: Úsalo en situaciones donde necesites controlar el espacio alrededor de los elementos o para lograr separaciones específicas entre elementos que no son parte de la cuadrícula.
  -->
