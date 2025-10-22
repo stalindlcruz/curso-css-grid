@@ -1,0 +1,27 @@
+body {
+    background-color: #ddd;
+}
+
+.container {
+    background-color: lightsalmon;
+    border: 2px solid #09f;
+    border-radius: 6px;
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: 50% 100px auto 10vw; */
+    /* grid-template-columns: 1fr 1fr 1fr; • 1fr -> 100% del espacio */
+    /* grid-template-rows: auto; -> Auto por defecto */
+    /* grid-template-rows: 100px 50px 1fr 30px 30px; */
+    /* grid-template-rows: 50px;
+    grid-auto-rows: 100px; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-template-columns: 25px repeat(5, 1fr) 50px; */
+    grid-template-columns: repeat(3, 25px 50px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.container div {
+    background-color: lightblue;
+    border: 2px solid #09f;
+    border-radius: 7px;
+}
