@@ -7,6 +7,7 @@ body {
     border: 2px solid #09f;
     border-radius: 6px;
     display: grid;
+    gap: 4px;
     /* grid-template-columns: auto auto auto; */
     /* grid-template-columns: 50% 100px auto 10vw; */
     /* grid-template-columns: 1fr 1fr 1fr; • 1fr -> 100% del espacio */
@@ -16,12 +17,38 @@ body {
     grid-auto-rows: 100px; */
     /* grid-template-columns: repeat(5, 1fr); */
     /* grid-template-columns: 25px repeat(5, 1fr) 50px; */
-    grid-template-columns: minmax(100px, 1fr) repeat(2, 1fr);
-    /* grid-template-rows: repeat(3, 100px); */
+    grid-template-columns: minmax(100px, 1fr) repeat(3, 1fr);
+    grid-template-rows: repeat(7, 100px);
 }
 
 .container div {
     background-color: lightblue;
     border: 2px solid #09f;
     border-radius: 7px;
+}
+
+.container div:first-child {
+    background-color: lightgreen;
+    border: 2px solid green;
+    grid-column-start: span 2;
+    grid-row-start: span 3;
+    /* grid-column-end: 2;
+    grid-row-start: 1; */
+    /* grid-row-end: 3; */
+}
+
+.container div:nth-child(2) {
+    background-color: aquamarine;
+    border: 2px solid blue;
+    /* grid-column-start: span 3;
+    grid-row-start: span 2; */
+    /* grid-column: 1 / -2; */
+    grid-column: 1 / 4;
+    grid-row: 4 / 6;
+}
+
+@media (width > 500px) {
+    .container {
+        grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+    }
 }
